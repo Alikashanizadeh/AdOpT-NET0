@@ -1,0 +1,39 @@
+{
+  "tec_type": "CONV3",
+  "size_is_int": 0,
+  "decommission": 0,
+  "size_min": 0,
+  "size_max": 1000,
+  "rated_power": 1.0,
+
+  "Economics": {
+    "CAPEX_model": 1,
+    "unit_CAPEX": 0.0,
+    "OPEX_fixed": 0.0,
+    "OPEX_variable": 0.0,
+    "discount_rate": 0.08,
+    "lifetime": 20,
+    "decommission_cost": 0.0
+  },
+
+  "Performance": {
+    "performance_function_type": 1,
+    "input_carrier": ["lohc_loaded", "heat"],
+    "output_carrier": ["hydrogen", "lohc_unloaded"],
+    "main_input_carrier": "lohc_loaded",
+    "input_ratios": {
+      "lohc_loaded": 1.0,
+      "heat": 0.2
+    },
+    "performance": {
+      "in": [0.0, 1.0],
+      "out": {
+        "hydrogen": [0.0, 0.5],
+        "lohc_unloaded": [0.0, 0.5]
+      }
+    },
+    "min_part_load": 0.0,
+    "standby_power": -1,
+    "emission_factor": 0.0
+  }
+}

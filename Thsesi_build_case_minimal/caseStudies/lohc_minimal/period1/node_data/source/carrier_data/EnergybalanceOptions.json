@@ -1,0 +1,14 @@
+{
+    "hydrogen": {
+        "curtailment_possible": 0
+    },
+    "lohc_loaded": {
+        "curtailment_possible": 0
+    },
+    "lohc_unloaded": {
+        "curtailment_possible": 0
+    },
+    "heat": {
+        "curtailment_possible": 0
+    }
+}
