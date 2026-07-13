@@ -1,0 +1,40 @@
+{
+  "network_type": "fluid",
+  "size_is_int": 0,
+  "decommission": "impossible",
+  "size_min": 0,
+  "size_max": 1000,
+  "Economics": {
+    "comment": "Debug LOHC unloaded return transport",
+    "gamma1": 1.0,
+    "gamma2": 0.01,
+    "gamma3": 0.0,
+    "gamma4": 0.0,
+    "OPEX_variable": 0.01,
+    "OPEX_fixed": 0.01,
+    "discount_rate": 0.08,
+    "lifetime": 20,
+    "decommission_cost": 0.0
+  },
+  "Performance": {
+    "carrier": "lohc_unloaded",
+    "bidirectional_network": 0,
+    "loss": 0.0,
+    "min_transport": 0.0,
+    "loss2emissions": 0.0,
+    "emissionfactor": 0.0,
+    "energyconsumption": {
+      "lohc_unloaded": {
+        "cons_model": 1,
+        "k_flow": 0.0,
+        "k_flowDistance": 0.0
+      }
+    }
+  },
+  "Units": {
+    "size": "MW",
+    "transport_carrier": {
+      "lohc_unloaded": "MW"
+    }
+  }
+}

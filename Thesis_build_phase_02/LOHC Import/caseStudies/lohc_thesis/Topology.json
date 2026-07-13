@@ -1,0 +1,24 @@
+{
+    "nodes": [
+        "import_terminal",
+        "hydrogen_hub",
+        "cluster",
+        "industry_1",
+        "industry_2",
+        "industry_3"
+    ],
+    "carriers": [
+        "hydrogen",
+        "lohc_loaded",
+        "lohc_unloaded",
+        "electricity",
+        "heat"
+    ],
+    "investment_periods": [
+        "period1"
+    ],
+    "start_date": "2022-01-01 00:00",
+    "end_date": "2022-01-02 00:00",
+    "resolution": "1h",
+    "investment_period_length": 1
+}

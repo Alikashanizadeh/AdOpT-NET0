@@ -1,0 +1,5 @@
+index;lon;lat;alt
+import_hydrogen_node;5.0;52.0;0.0
+hydrogenation_node;5.1;52.0;0.0
+dehydrogenation_node;5.2;52.0;0.0
+demand_node;5.3;52.0;0.0

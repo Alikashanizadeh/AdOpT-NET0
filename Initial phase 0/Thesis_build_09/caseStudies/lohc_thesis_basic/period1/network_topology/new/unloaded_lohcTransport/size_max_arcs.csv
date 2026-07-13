@@ -1,0 +1,5 @@
+;import_hydrogen_node;hydrogenation_node;dehydrogenation_node;demand_node
+import_hydrogen_node;0;0;0;0
+hydrogenation_node;0;0;0;0
+dehydrogenation_node;0;1000;0;0
+demand_node;0;0;0;0

@@ -1,0 +1,72 @@
+{
+  "tec_type": "CONV3",
+  "size_is_int": 0,
+  "decommission": 0,
+  "size_min": 0,
+  "size_max": 250000,
+  "rated_power": 1.0,
+
+ "Economics": {
+   "comment": "CAPEX coefficients are in EUR,opex_fixed in % of CAPEX_annual,source:Cava et al. (2025), full installed cost",
+  "CAPEX_model": 2,
+  "unit_CAPEX": -1,
+  "fix_CAPEX": 0,
+  "OPEX_fixed": 0.04,
+  "OPEX_variable": 0,
+  "discount_rate": 0.08,
+  "lifetime": 15,
+  "decommission_cost": 0,
+  "piecewise_CAPEX": {
+    "bp_x": [
+      0,
+      645.16,
+      1612.90,
+      2580.65,
+      3225.81,
+      8064.52,
+      16129.03,
+      32258.06,
+      48387.10,
+      80645.16,
+      201612.90
+    ],
+    "bp_y": [
+      0,
+      955457,
+      1655676,
+      2195064,
+      2509535,
+      4348678,
+      6591363,
+      9990638,
+      12742305,
+      17312399,
+      30000000
+    ]
+  }
+},
+
+  "Performance": {
+    "performance_function_type": 1,
+    "input_carrier": ["lohc_loaded", "heat","electricity","hydrogen"],
+    "output_carrier": ["hydrogen", "lohc_unloaded"],
+    "main_input_carrier": "lohc_loaded",
+    "input_ratios": {
+      "lohc_loaded": 1.0,
+      "heat": 0.0004712,
+      "electricity": 0.000031,
+      "hydrogen" : 0.003
+    },
+    "performance": {
+      "in": [0.0, 1.0],
+      "out": {
+        "hydrogen": [0.0, 0.062],
+        "lohc_unloaded": [0.0, 0.9333],
+        "Degraded_lohc": [0.0, 0.0047]
+      }
+    },
+    "min_part_load": 0.0,
+    "standby_power": -1,
+    "emission_factor": 0.0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "tec_type": "CONV3",
+  "size_is_int": 0,
+  "decommission": 0,
+  "size_min": 0,
+  "size_max": 10000,
+  "rated_power": 1.0,
+
+
+  "Economics": {
+    "comment": "Hydrogenation CAPEX in EUR. Source: Cava et al. (2025), DBT/PDBT LOHC hydrogenation, 40 MEUR at 300 tH2/day, scaling exponent 0.6. OPEX_fixed is 4 percent of CAPEX.",
+    "CAPEX_model": 2,
+    "unit_CAPEX": -1,
+    "fix_CAPEX": 0,
+    "OPEX_fixed": 0.04,
+    "OPEX_variable": 0,
+    "discount_rate": 0.08,
+    "lifetime": 15,
+    "decommission_cost": 0,
+    "piecewise_CAPEX": {
+      "bp_x": [
+        0,
+        100,
+        500,
+        1000,
+        2000,
+        3000,
+        5000,
+        10000,
+        12500
+      ],
+      "bp_y": [
+        0,
+        2207567,
+        5798237,
+        8788484,
+        13320851,
+        16989740,
+        23083198,
+        34978289,
+        40000000
+      ]
+    }
+  },
+
+
+  "Performance": {
+    "performance_function_type": 1,
+    "input_carrier": ["hydrogen", "lohc_unloaded","electricity"],
+    "output_carrier": ["lohc_loaded"],
+    "main_input_carrier": "hydrogen",
+    "input_ratios": {
+      "hydrogen": 1.0,
+      "lohc_unloaded": 15.129,
+      "electricity": 0.0005
+    },
+    "performance": {
+      "in": [0.0, 1.0],
+      "out": {
+        "lohc_loaded": [0.0, 16.129],
+        "heat": [0.0,0.00760]
+      }
+    },
+    "min_part_load": 0.0,
+    "standby_power": -1,
+    "emission_factor": 0.0
+  }
+}
