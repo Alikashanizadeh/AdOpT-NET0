@@ -8,7 +8,7 @@ import pandas as pd
 
 # 0. PATHS
 
-results_data_path = Path("./userData/Koersvaste_No_Heat_30_Tipical")
+results_data_path = Path("./userData/Eigen_Full_Heat_30_Tipical_gap 0.003")
 results_data_path.mkdir(parents=True, exist_ok=True)
 
 input_data_path = Path("./caseStudies/lohc_thesis")
@@ -65,10 +65,10 @@ with open(input_data_path / "ConfigModel.json", "r") as f:
 config["reporting"]["save_path"]["value"] = str(results_data_path)
 
 # Set time aggregation settings:
-config["optimization"]["typicaldays"]["N"]["value"] = 5
+config["optimization"]["typicaldays"]["N"]["value"] = 30
 config["optimization"]["typicaldays"]["method"]["value"] = 1
 
-config["solveroptions"]["mipgap"]["value"] = 0.02
+config["solveroptions"]["mipgap"]["value"] = 0.003
 
 with open(input_data_path / "ConfigModel.json", "w") as f:
     json.dump(config, f, indent=4)
@@ -431,7 +431,7 @@ adopt.fill_carrier_data(
 # hydrogen demand at demand node
 # Variable hydrogen demand for Industry 1
 # Column 3 is one column after the electricity-price column
-industry_1_demand = industry_hourly_data.iloc[:, 6]
+industry_1_demand = industry_hourly_data.iloc[:, 9]
 
 # Match demand data to the model horizon
 industry_1_demand = industry_1_demand.iloc[:n_steps+1].reset_index(drop=True)
@@ -447,7 +447,7 @@ adopt.fill_carrier_data(
 
 # Variable hydrogen demand for Industry 2
 
-industry_2_demand = industry_hourly_data.iloc[:, 7]
+industry_2_demand = industry_hourly_data.iloc[:, 10]
 
 # Match demand data to the model horizon
 industry_2_demand = industry_2_demand.iloc[:n_steps+1].reset_index(drop=True)
@@ -462,7 +462,7 @@ adopt.fill_carrier_data(
 
 # Variable hydrogen demand for Industry 3
 
-industry_3_demand = industry_hourly_data.iloc[:, 8]
+industry_3_demand = industry_hourly_data.iloc[:, 11]
 
 # Match demand data to the model horizon
 industry_3_demand = industry_3_demand.iloc[:n_steps+1].reset_index(drop=True)

@@ -3,7 +3,7 @@
   "size_is_int": 0,
   "decommission": "impossible",
   "size_min": 0,
-  "size_max": 200000,
+  "size_max": 400000,
   "Economics": {
     "comment": "Debug LOHC unloaded return transport",
     "gamma1": 0.0,

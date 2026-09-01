@@ -1,0 +1,64 @@
+{
+    "tec_type": "STOR",
+    "size_min": 0,
+    "size_max": 1500,
+    "size_is_int": 0,
+    "decommission": "impossible",
+    "Economics": {
+        "comment": "CAPEX in EUR/Kg H2 or as a piecewise function, opex_variable in EUR/Kg H2 total output, opex_fixed in % of up-front CAPEX",
+        "CAPEX_model": 1,
+        "unit_CAPEX": 500,
+        "fix_CAPEX": 0,
+        "piecewise_CAPEX": {
+            "bp_x": "not defined",
+            "bp_y": "not defined"
+        },
+        "OPEX_variable": 0,
+        "OPEX_fixed": 0,
+        "discount_rate": 0.1,
+        "lifetime": 25,
+        "decommission_cost": 0
+    },
+    "Performance": {
+        "comment": "contains fitting data on unit of input, technology types and input/output carriers",
+        "input_carrier": [
+            "hydrogen"
+        ],
+        "main_input_carrier": "hydrogen",
+        "output_carrier": [
+            "hydrogen"
+        ],
+        "emission_factor": 0,
+        "allow_only_one_direction": 1,
+        "allow_only_one_direction_precise": 0,
+        "performance": {
+            "eta_in": 0.95,
+            "eta_out": 0.95,
+            "lambda": 0,
+            "theta": 0
+        },
+        "pressure": {
+            "hydrogen": {
+                "inlet": 80,
+                "outlet": 80
+            }
+        }
+    },
+    "Flexibility": {
+        "comment": "determines the flexibility of the power capacity compared to the energy capacity",
+        "power_energy_ratio": "fixedratio",
+        "charge_rate": 0.8,
+        "discharge_rate": 0.8,
+        "capex_charging_power": 0,
+        "capex_discharging_power": 0
+    },
+    "Units": {
+        "size": "Kg H2",
+        "input_carrier": {
+            "hydrogen": "Kg H2/h"
+        },
+        "output_carrier": {
+            "hydrogen": "Kg H2/h"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "network_type": "fluid",
+    "size_is_int": 0,
+    "capex_defined_per_arc": 0,
+    "size_max_defined_per_arc": 0,
+    "decommission": "impossible",
+    "size_min": 0,
+    "size_max": 7500,
+  "Economics": {
+    "comment": "CAPEX coefficients are in EUR, EUR/(kgH2/h), EUR/km, or EUR/(kgH2/h)/km. Converted from MW basis using 1 kgH2/h = 0.03333 MW. OPEX_variable is EUR/kgH2 transported.",
+    "gamma1": 5000000,
+    "gamma2": 0,
+    "gamma3": 0,
+    "gamma4": 56.67,
+    "OPEX_variable": 0.0003333,
+    "OPEX_fixed": 0,
+    "discount_rate": 0.1,
+    "lifetime": 30,
+    "decommission_cost": 0
+  },
+
+    "Performance": {
+        "carrier": "hydrogen",
+        "bidirectional_network": 0,
+        "loss": 0,
+        "min_transport": 0,
+        "loss2emissions": 0,
+        "emissionfactor": 0,
+        "energyconsumption": [],
+        "pressure": {
+            "hydrogen": {
+                "inlet": 5,
+                "outlet": 5
+            }
+        },
+        "bidirectional_network_precise": 0
+    },
+    "Units": {
+        "size": "MW",
+        "transport_carrier": {
+            "hydrogen": "MW"
+        }
+    }
+}

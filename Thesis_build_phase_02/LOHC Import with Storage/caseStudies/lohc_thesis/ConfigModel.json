@@ -57,7 +57,7 @@
         "typicaldays": {
             "N": {
                 "description": "Determines number of typical days (0 = off).",
-                "value": 5
+                "value": 30
             },
             "method": {
                 "description": "Determine method used for modeling technologies with typical days.",
@@ -93,7 +93,7 @@
         },
         "mipgap": {
             "description": "Value to define MIP gap.",
-            "value": 0.02
+            "value": 0.003
         },
         "timelim": {
             "description": "Value to define time limit in hours.",
@@ -207,7 +207,7 @@
         },
         "save_path": {
             "description": "Option to define the save path.",
-            "value": "userData\\Koersvaste_No_Heat_5_Tipical_new_unloaded_max"
+            "value": "userData\\Eigen_Full_Heat_30_Tipical_gap 0.003"
         },
         "case_name": {
             "description": "Option to define a case study name that is added to the results folder name.",

@@ -1,0 +1,8 @@
+{
+    "existing": {},
+    "new": [
+        "Hydrogenation_LOHC",
+        "Dehydrogenation_LOHC",
+        "Storage_H2_highP"
+    ]
+}

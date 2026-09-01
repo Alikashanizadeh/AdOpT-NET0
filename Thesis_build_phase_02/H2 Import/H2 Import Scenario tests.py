@@ -8,7 +8,7 @@ import pandas as pd
 
 # 0. PATHS
 
-results_data_path = Path("./userData/Koersvaste_No_Heat_5_Tipical")
+results_data_path = Path("./userData/Koersvaste_Partial_Heat_5_Tipical")
 results_data_path.mkdir(parents=True, exist_ok=True)
 
 input_data_path = Path("./caseStudies/Hydrogen_thesis")
@@ -317,7 +317,7 @@ adopt.copy_network_data(input_data_path)
 # hydrogen import at import node
 adopt.fill_carrier_data(
     input_data_path,
-    value_or_data=10000,
+    value_or_data=100000,
     columns=["Import limit"],
     carriers=["hydrogen"],
     nodes=["import_terminal"]
@@ -401,10 +401,11 @@ adopt.fill_carrier_data(
 )
 
 # variable electricity import price from AdOpT-NET0 household case-study data
-household_hourly_data = adopt.load_household_data()
+industry_hourly_data = adopt.load_household_data()
+
 
 # In the household case study, column 2 is the hourly day-ahead electricity price
-el_price = household_hourly_data.iloc[:, 2]
+el_price = industry_hourly_data.iloc[:, 2]
 
 # Match the electricity price length to your model horizon
 n_steps = len(pd.date_range(

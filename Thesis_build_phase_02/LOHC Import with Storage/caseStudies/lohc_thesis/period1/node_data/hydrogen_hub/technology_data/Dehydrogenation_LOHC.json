@@ -54,9 +54,9 @@
     "main_input_carrier": "lohc_loaded",
     "input_ratios": {
       "lohc_loaded": 1.0,
-      "heat": 0,
+      "heat": 0.0004712,
       "electricity": 0.000031,
-      "hydrogen" : 0.01488
+      "hydrogen" : 0
     },
     "performance": {
       "in": [0.0, 1.0],
